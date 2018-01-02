@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>University Calendar</title>
+
+  <link rel="stylesheet" href="/static/CSS/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="/static/CSS/normalize.min.css" type="text/css">
+  <link rel='stylesheet prefetch' href='/static/CSS/fullcalendar.css' type="text/css">
+  <link rel="stylesheet" href="/static/CSS/style.css" type="text/css">
+
+</head>
+
+<body>
+  <div id='calendar'></div>
+  <!-- <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> -->
+  <script type="text/javascript" src='/static/Jscript/jquery-ui.min.js'></script>
+  <script type="text/javascript" src='/static/Jscript/moment.min.js'></script>
+  <script type="text/javascript" src='/static/Jscript/jquery.min.js'></script>
+  <script type="text/javascript" src='/static/Jscript/fullcalendar.min.js'></script>
+  <script type="text/javascript" src="/static/Jscript/index2.js"></script>
+
+
+
+  <div id='AddEventForm'>
+    <button id="buttonGeneral2" class="switchButton Grey">General Event</button>
+    <button id="buttonPersonal2" class="switchButton Grey">Personal Event</button>
+    <br><br>
+    <form name="myForm" action="/" onsubmit="return validateForm()" method="post">
+      Title: <input class="inputEvent" name="Title">
+      <div class="centered">
+        Start Date: <input class="inputEvent Date" type="date" name="sdate"> End Date: <input class="inputEvent Date" type="date" name="edate"><br>
+      </div>
+      Select Course:
+      <input class="inputEvent" list="Courses" name="Courses">
+      <datalist id="Courses"></datalist><br> Invite Colleagues:
+      <input class="inputEvent" list="Colleagues" name="colleagues">
+      <datalist id="Colleagues">  </datalist><br> Location: <input class="inputEvent" type="text" name="location"><br> Description: <input class="inputEvent" type="text" name="location"><br>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+
+  <div id='StudentList'>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Section</th>
+          <th>Name</th>
+          <th>ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div id='AddGeneralEvent'>
+    <button id="buttonGeneral1" class="switchButton Grey">General Event</button>
+    <button id="buttonPersonal1" class="switchButton Grey">Personal Event</button>
+    <br><br>
+    <form name="myForm" action="/" onsubmit="return validateForm()" method="post">
+      Title: <input class="inputEvent" name="Title">
+      <div class="centered">
+        Start Date: <input class="inputEvent" type="date" name="sdate"> End Date: <input class="inputEvent" type="date" name="edate">
+      </div>
+
+      <fieldset style="max-width:600px; margin:10px auto; border: 0px;">
+        <table id="weekTable">
+          <tr class="weekdays">
+            <td class="isWeekend">
+              <ins></ins></td>
+            <td><ins></ins></td>
+            <td><ins></ins></td>
+            <td><ins></ins></td>
+            <td><ins></ins></td>
+            <td><ins></ins></td>
+            <td class="isWeekend">
+              <ins></ins></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      Select Course: <input class="inputEvent" list="Courses" name="Courses">
+      <datalist id="Courses"></datalist><br> Select Section:
+      <input class="inputEvent" list="Colleagues" name="colleagues">
+      <datalist id="Colleagues">  </datalist><br>
+      <input type="radio" name="gender" value="Midterm" checked> Midterm
+      <input type="radio" name="gender" value="Major"> Major
+      <input type="radio" name="gender" value="Project"> Project
+      <input type="radio" name="gender" value="Homework" checked> Homework
+      <input type="radio" name="gender" value="ClassTest"> Class Test
+      <input type="radio" name="gender" value="Quiz"> Quiz <br> Location: <input class="inputEvent" type="text" name="location"><br> Description: <br><textarea rows="7" cols="100" name="description">Enter text here...</textarea><br>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span> Select Course:
+      <input class="inputEvent" list="Courses" name="Courses">
+      <datalist id="Courses"></datalist><br> Select Section:
+      <input class="inputEvent" list="Colleagues" name="colleagues">
+      <datalist id="Colleagues">  </datalist><br>
+      <input id="applyCS" type="submit" name="submit" value="Apply">
+    </div>
+
+  </div>
+
+</body>
+
+</html>

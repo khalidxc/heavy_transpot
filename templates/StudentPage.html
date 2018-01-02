@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SCalnder</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://fullcalendar.io/js/fullcalendar-2.4.0/fullcalendar.css'>
+  <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+  <div id='calendar'></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <script src='https://fullcalendar.io/js/fullcalendar-2.4.0/lib/moment.min.js'></script>
+  <script src='https://fullcalendar.io/js/fullcalendar-2.4.0/lib/jquery.min.js'></script>
+  <script src='https://fullcalendar.io/js/fullcalendar-2.4.0/fullcalendar.min.js'></script>
+  <script src="Jscript/index.js"></script>
+
+
+
+  <div id='AddEventForm'>
+      Title: <input class="inputEvent" name="Title"> Start Date: <input class="inputEvent" type="date" name="sdate"><br> End Date: <input class="inputEvent" type="date" name="edate"><br> Select Course:
+      <input class="inputEvent" list="Courses" name="Courses">
+      <datalist id="Courses"></datalist><br> Invite Colleagues:
+      <input class="inputEvent" list="Colleagues" name="colleagues">
+      <datalist id="Colleagues">  </datalist><br> Location: <input class="inputEvent" type="text" name="location"><br> Description: <input class="inputEvent" type="text" name="location"><br>
+      <input type="submit" name="submit" value="Apply">
+  </div>
+
+</body>
+
+</html>
