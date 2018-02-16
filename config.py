@@ -1,8 +1,8 @@
 
-db_host = 'khallid.com'
-db_username = 'kfupmcalendar'
-db_password = 'kfupmcalendar'
-db_name = 'SWE363'
+db_host = 'localhost'
+db_username = 'heavy_transpot'
+db_password = '6116'
+db_name = 'heavy_transpot'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = 'dfvkjvnkjsvnjfnmomfnasfioreajfvoermyowetfuwrgfpmfgcxajsvijiou3e'
 

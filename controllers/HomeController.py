@@ -1,9 +1,4 @@
 from flask import render_template
-from models.instructor import instructor
-from models.student import student
-from models.course import course
-from models.studentscourses import studentscourses
-from models.eventlist import eventlist
 import json
 
 class HomeController():
